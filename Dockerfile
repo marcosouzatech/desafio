@@ -2,10 +2,11 @@
 
 FROM golang:1.19
 
+CMD ls 
 # Set destination for COPY
 WORKDIR /app
 
-# Download Go modules
+t# Download Go modules
 COPY go.mod go.sum ./
 
 RUN go mod download
@@ -18,6 +19,7 @@ COPY . .
 
 RUN go build -o main
 
+CMD ls /app
 # Build
 #RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
 
