@@ -33,7 +33,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: marcosluv/desafio-meli:latest
+          tags: marcosluv/desafio-meli:1.0.0
 
 #  deploy:
 #    needs: build
