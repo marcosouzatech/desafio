@@ -1,0 +1,97 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mexico
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mexico
+  namespace: mexico
+spec:
+  selector:
+    matchLabels:
+      app: mexico
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mexico
+    spec:
+      containers:
+      - image: marcosluv/desafio-meli:test
+        name: mexico
+        env:
+          - name: APP_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: APP_NAME
+          - name: DB_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: DB_PORT
+          - name: DB_NOME
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: DB_NOME
+          - name: DB_URL
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: DB_URL
+          - name: DB_USUARIO
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: DB_USUARIO      
+          - name: API_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: API_PORT
+          - name: DB_SENHA
+            valueFrom:
+              secretKeyRef:
+                name: secret-db-api
+                key: DB_SENHA
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mexico
+  namespace: mexico
+spec:
+  ports:
+  - targetPort: 8080 
+    port: 7000
+    nodePort: 30004
+    protocol: TCP
+  type: NodePort
+  selector:
+    app: mexico
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-api
+  namespace: mexico
+data:
+  APP_NAME: "mexico"
+  DB_PORT: "3306"
+  DB_USUARIO: "desafio"
+  DB_URL: "desafio-api.c83ipwcuxs6c.us-east-1.rds.amazonaws.com"
+  DB_NOME: "mexico"
+  API_PORT: "8080"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: secret-db-api
+  namespace: mexico
+type: Opaque
+data:
+  DB_SENHA: TSRsYTVXTnRBNXFU 

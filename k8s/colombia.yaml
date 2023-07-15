@@ -1,0 +1,97 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: colombia
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: colombia
+  namespace: colombia
+spec:
+  selector:
+    matchLabels:
+      app: colombia
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: colombia
+    spec:
+      containers:
+      - image: marcosluv/desafio-meli:test
+        name: colombia
+        env:
+          - name: APP_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: APP_NAME
+          - name: DB_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: DB_PORT
+          - name: DB_NOME
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: DB_NOME
+          - name: DB_URL
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: DB_URL
+          - name: DB_USUARIO
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: DB_USUARIO      
+          - name: API_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-api
+                key: API_PORT
+          - name: DB_SENHA
+            valueFrom:
+              secretKeyRef:
+                name: secret-db-api
+                key: DB_SENHA
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: colombia
+  namespace: colombia
+spec:
+  ports:
+  - targetPort: 8080 
+    port: 3003
+    nodePort: 30003
+    protocol: TCP
+  type: NodePort
+  selector:
+    app: colombia
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-api
+  namespace: colombia
+data:
+  APP_NAME: "colombia"
+  DB_PORT: "3306"
+  DB_USUARIO: "desafio"
+  DB_URL: "desafio-api.c83ipwcuxs6c.us-east-1.rds.amazonaws.com"
+  DB_NOME: "colombia"
+  API_PORT: "8080"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: secret-db-api
+  namespace: colombia
+type: Opaque
+data:
+  DB_SENHA: TSRsYTVXTnRBNXFU 
