@@ -33,17 +33,17 @@ jobs:
         with:
           context: ./desafio_api/.
           push: true
-          tags: marcosluv/desafio-meli:alpha
+          tags: marcosluv/desafio-meli:latest
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Apply Manifests in EKS
-        uses: azure/k8s-set-context@v1
-        with:
-          kubeconfig: ${{ secrets.KUBECONFIG }}
-
-      - name: Apply Kubernetes manifest
-        run: kubectl apply -f ./k8s/ --recursive
+#  deploy:
+#    needs: build
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Apply Manifests in EKS
+#        uses: azure/k8s-set-context@v1
+#        with:
+#          kubeconfig: ${{ secrets.KUBECONFIG }}
+#
+#      - name: Apply Kubernetes manifest
+#        run: kubectl apply -f ./k8s/ --recursive
