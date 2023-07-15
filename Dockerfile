@@ -6,7 +6,7 @@ RUN ls
 # Set destination for COPY
 WORKDIR /app
 
-t# Download Go modules
+# Download Go modules
 COPY go.mod go.sum ./
 
 RUN go mod download
