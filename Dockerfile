@@ -2,7 +2,7 @@
 
 FROM golang:1.19
 
-CMD ls 
+RUN ls 
 # Set destination for COPY
 WORKDIR /app
 
@@ -19,7 +19,7 @@ COPY . .
 
 RUN go build -o main
 
-CMD ls /app
+RUN ls /app
 # Build
 #RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
 
