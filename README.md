@@ -88,6 +88,8 @@ Foi implementado o kubecost para auxiliar no controle dos custos do ambiente, el
   
 Este challenge foi realmente desafiador, trouxe conteúdo denso de vários aspectos envolvendo infraestrutura, desenvolvimento e operações, com certeza temos vários pontos a melhorar principalmente visando IAC, acredito que consegui demonstrar vários aspectos importantes que foram me solicitados. 
 
+> Não foi levado em conta nenhum modelo padrão de versionamento/gitflow
+
 
 #### REFERÊNCIAS
 
