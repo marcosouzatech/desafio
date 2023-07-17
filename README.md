@@ -1,7 +1,6 @@
 
 # DESAFIO API ITENS #
 
-    
 
 ## 1 - FRAGMENTAÇÃO DE TRÁFEGO
  
@@ -78,7 +77,7 @@ Maiores integrações com newRelic podem ser efetuadas.
 
 Como alternativa ao newRelic, podemos utilizar o Dynatrace, Datadog, Elastic Stack entre outras soluções openSource. 
 
-![DASHBOARD - ARGENTINA](https://github.com/marcosouzatech/desafio/blob/main/img/dashboard_argentina.pdf)
+[DASHBOARD - ARGENTINA - VERSÃO PDF ](https://github.com/marcosouzatech/desafio/blob/main/img/dashboard_argentina.pdf)
 
 ## CUSTOS 
 
@@ -89,8 +88,6 @@ Foi implementado o kubecost para auxiliar no controle dos custos do ambiente, el
 ### Considerações Finais
   
 Este challenge foi realmente desafiador, trouxe conteúdo denso de vários aspectos envolvendo infraestrutura, desenvolvimento e operações, com certeza temos vários pontos a melhorar principalmente visando IAC, acredito que consegui demonstrar vários aspectos importantes que foram me solicitados. 
- 
-  
 
 #### REFERÊNCIAS
 
@@ -104,3 +101,10 @@ https://newrelic.com/pt
 https://github.com/kubecost/cost-analyzer-helm-chart
 - EVIDÊNCIAS DO PRJETO.
 https://github.com/marcosouzatech/desafio/blob/main/img/
+
+
+##### CONTATOS
+
+Linkedin: (https://www.linkedin.com/in/marcosouzatech/)
+Youtube: https://www.youtube.com/@maistalkmenosshow
+Email: marcos.souza@luvtech.com.br
