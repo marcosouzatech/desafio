@@ -47,7 +47,7 @@ Ao executar a chamada na api podemos verificar ao atingir o limite recebemos 429
 
 ![TESTE DE CARGA POSTMAN](https://github.com/marcosouzatech/desafio/blob/main/img/teste_postman.png)
 
-![TESTE DE CARGA HEY - EXECUÇÃO 1MINUTO](https://github.com/marcosouzatech/desafio/blob/main/img/desafio/img/teste_hey.png)
+![TESTE DE CARGA HEY - EXECUÇÃO 1MINUTO](https://github.com/marcosouzatech/desafio/blob/main/img/teste_hey.png)
 
 
 ## 3 - MONITORAMENTO
