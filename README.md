@@ -31,7 +31,7 @@ No primeiro momento já tinha intuito de utilizar AWS como cloud provider e API 
 
 Por este motivo foi decidido colocar a a lógica da fragmentação `site_id` de origem no header no `ApplicationLoadBalancer, e evitar custos do Lambda, mas como alternativas poderíamos explorar outro Gateway como Kong ou KrakenD, um proxy reverso: nginx ou service mesh istio ou algo similar. 
 
-Foi provisionado um targetGroup para representar cada ambiente, essa etapa me livrou de configurar ZonaDNS e Ingress de cada aplicação, em um ambiente real seria encaminhado para outro loadbalancer ou endpoint.
+> Foi provisionado um targetGroup para representar cada ambiente, essa etapa me livrou de configurar ZonaDNS e Ingress de cada aplicação, em um ambiente real seria encaminhado para outro loadbalancer ou endpoint.
 
 Para representar a solução foi desenhado o diagrama de arquitetura:
 
@@ -87,6 +87,7 @@ Foi implementado o kubecost para auxiliar no controle dos custos do ambiente, el
 ### Considerações Finais
   
 Este challenge foi realmente desafiador, trouxe conteúdo denso de vários aspectos envolvendo infraestrutura, desenvolvimento e operações, com certeza temos vários pontos a melhorar principalmente visando IAC, acredito que consegui demonstrar vários aspectos importantes que foram me solicitados. 
+
 
 #### REFERÊNCIAS
 
