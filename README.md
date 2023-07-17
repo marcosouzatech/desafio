@@ -1,11 +1,9 @@
 
 # DESAFIO API ITENS #
 
-
 ## 1 - FRAGMENTAÇÃO DE TRÁFEGO
  
 Para conseguir concluir o primeiro desafio, me dediquei a terminar parte do curso de Golang que estava cursando e colocar meus conhecimentos em prática e nesse processo algumas adaptações foram efetuadas para atender a necessidade do desafio proposto.
-  
 
 **1.1 - API ITENS**
 
@@ -16,7 +14,7 @@ Para conseguir concluir o primeiro desafio, me dediquei a terminar parte do curs
 - Criação da Imagem Docker
 - Criação dos arquivos manifestos kubernetes
   
-1.2 - Provisionamento Cluster EKS
+**1.2 - Provisionamento Cluster EKS**
 - Criação e adaptação dos arquivos terraform
 - Utilização de máquinas spot
 - Instalação de Add-Ons ( Kube-Proxy, CoreDNS, CNI-Plugin, EBS CSI Driver)
@@ -24,8 +22,10 @@ Para conseguir concluir o primeiro desafio, me dediquei a terminar parte do curs
 - Provisionamento do Aplication LoadBalancing
 - Provisionamento do TargetGroup e regras listners ( MLA/MLB/MLC/MLM )
   
-1.3 - Criação do Banco de dados RDS
+**1.3 - Criação do Banco de dados RDS**
 - Criação das tabelas
+
+> Para fins de demonstração foi criado apenas 1 RDS contendo as 4 tabelas porém essa solução não necessáriamente precisa representar um ambiente real, dependendo da utilização é interessante fragmentar a base de dados para evitar problemas de performance. 
 
 No primeiro momento já tinha intuito de utilizar AWS como cloud provider e API Internet Gateway para fazer o roteamento de tráfego com base no header, após algumas pesquisas identifiquei que seria necessário utilizar uma função lambda para ler o Header e efetuar o forwarding da requisição para o ambiente desejado.
 
@@ -33,10 +33,9 @@ Por este motivo foi decidido colocar a a lógica da fragmentação `site_id` de 
 
 Foi provisionado um targetGroup para representar cada ambiente, essa etapa me livrou de configurar ZonaDNS e Ingress de cada aplicação, em um ambiente real seria encaminhado para outro loadbalancer ou endpoint.
 
-Para representar a estrutura lógica foi criada o diagrama de arquitetura:
+Para representar a solução foi desenhado o diagrama de arquitetura:
 
-
-![DIAGRAMA DE ARQUITETURA ](https://github.com/marcosouzatech/desafio/blob/main/img/arquitetura.png)
+![DIAGRAMA DE ARQUITETURA ](https://github.com/marcosouzatech/desafio/blob/main/img/diagrama.png)
 
 
 Podemos efetuar requisições para o ambiente da API Itens:
@@ -102,9 +101,7 @@ https://github.com/kubecost/cost-analyzer-helm-chart
 - EVIDÊNCIAS DO PRJETO.
 https://github.com/marcosouzatech/desafio/blob/main/img/
 
-
 ##### CONTATOS
-
-Linkedin: (https://www.linkedin.com/in/marcosouzatech/)
-Youtube: https://www.youtube.com/@maistalkmenosshow
-Email: marcos.souza@luvtech.com.br
+- Linkedin: (https://www.linkedin.com/in/marcosouzatech/)
+- Youtube: https://www.youtube.com/@maistalkmenosshow
+- Email: marcos.souza@luvtech.com.br
