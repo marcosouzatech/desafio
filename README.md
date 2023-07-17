@@ -84,6 +84,10 @@ Foi implementado o kubecost para auxiliar no controle dos custos do ambiente, el
   
 ![KUBECOST OVERVIEW](https://github.com/marcosouzatech/desafio/blob/main/img/kubecost.png)
 
+## GIT ACTIONS
+
+Foi implementado um workflow de exemplo para efetuar build da imagem e publish no repositório dockerhub, não foi adicionado o processo de deploy pois nosso cluster não está exposto url públicas e as não foram provisionados runners self-hosted. 
+
 ### Considerações Finais
   
 Este challenge foi realmente desafiador, trouxe conteúdo denso de vários aspectos envolvendo infraestrutura, desenvolvimento e operações, com certeza temos vários pontos a melhorar principalmente visando IAC, acredito que consegui demonstrar vários aspectos importantes que foram me solicitados. 
