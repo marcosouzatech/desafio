@@ -34,7 +34,7 @@ Foi provisionado um targetGroup para representar cada ambiente, essa etapa me li
 
 Já é possivel efetuar requisições para o ambiente da API Itens que desejar como mostra na figura:
 
-![DIAGRAMA DE ARQUITETURA ](https://github.com/marcosouzatech/desafio/img/arquitetura.png)
+![DIAGRAMA DE ARQUITETURA ](https://github.com/marcosouzatech/desafio/blob/main/img/arquitetura.png)
 
 
 ## 2 - LIMITAÇÃO DE TRÁFEGO 
@@ -45,9 +45,9 @@ Foi alcançado o objetivo de limitar as requisições quando receber 1000 requis
 
 Ao executar a chamada na api podemos verificar ao atingir o limite recebemos 429 TOO MANY REQUESTS.
 
-![TESTE DE CARGA POSTMAN](https://github.com/marcosouzatech/desafio/img/teste_postman.png)
+![TESTE DE CARGA POSTMAN](https://github.com/marcosouzatech/desafio/blob/main/img/teste_postman.png)
 
-![TESTE DE CARGA HEY - EXECUÇÃO 1MINUTO](https://github.com/marcosouzatech/desafio/img/teste_hey.png)
+![TESTE DE CARGA HEY - EXECUÇÃO 1MINUTO](https://github.com/marcosouzatech/desafio/blob/main/img/desafio/img/teste_hey.png)
 
 
 ## 3 - MONITORAMENTO
@@ -86,4 +86,4 @@ Kubecost - Monitor and manage Kubernetes spend
 https://github.com/kubecost/cost-analyzer-helm-chart
 
 EVIDÊNCIAS DO PRJETO.
-https://github.dev/marcosouzatech/desafio/img/
+https://github.com/marcosouzatech/desafio/blob/main/img/
