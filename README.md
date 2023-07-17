@@ -56,7 +56,7 @@ Apesar do Api Internet Gateway não funcionar muito bem para validar as regras n
   
 A regra limita o tráfego em 15 requisições por segundo e assim consegue limitar o tráfego a 1000 requisições por minuto conforme descrito no desafio. 
 
-Ao executar a chamada na api podemos verificar ao atingir o limite recebemos 429 TOO MANY REQUESTS.
+Ao executar a chamada na api podemos verificar ao atingir o limite recebemos `429 TOO MANY REQUESTS`
   
 ![TESTE DE CARGA POSTMAN](https://github.com/marcosouzatech/desafio/blob/main/img/teste_postman.png)
 
