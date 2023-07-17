@@ -34,7 +34,7 @@ Foi provisionado um targetGroup para representar cada ambiente, essa etapa me li
 
 Já é possivel efetuar requisições para o ambiente da API Itens que desejar como mostra na figura:
 
-![Alt text](https://github.com/marcosouzatech/desafio/img/diagramaarquitetura.png)
+![DIAGRAMA DE ARQUITETURA ](https://github.com/marcosouzatech/desafio/img/arquitetura.png)
 
 
 ## 2 - LIMITAÇÃO DE TRÁFEGO 
@@ -45,9 +45,9 @@ Foi alcançado o objetivo de limitar as requisições quando receber 1000 requis
 
 Ao executar a chamada na api podemos verificar ao atingir o limite recebemos 429 TOO MANY REQUESTS.
 
-![Alt text](https://github.com/marcosouzatech/desafio/img/teste de carga1-postman.png)
+![TESTE DE CARGA POSTMAN](https://github.com/marcosouzatech/desafio/img/teste_postman.png)
 
-![Alt text](https://github.com/marcosouzatech/desafio/img/hey-teste-trafego.png)
+![TESTE DE CARGA HEY - EXECUÇÃO 1MINUTO](https://github.com/marcosouzatech/desafio/img/teste_hey.png)
 
 
 ## 3 - MONITORAMENTO
