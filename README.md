@@ -34,11 +34,21 @@ Foi provisionado um targetGroup para representar cada ambiente, essa etapa me li
 
 Já é possivel efetuar requisições para o ambiente da API Itens que desejar como mostra na figura:
 
+![Alt text](https://github.com/marcosouzatech/desafio/img/diagramaarquitetura.png)
+
+
 ## 2 - LIMITAÇÃO DE TRÁFEGO 
 
 Apesar do Api Internet Gateway não funcionar muito bem para validar as regras no header, utilizei API Internet Gateway para expor endpoint público e criar limitação de tráfego com base no desafio. 
 
 Foi alcançado o objetivo de limitar as requisições quando receber 1000 requisições por minuto ou 16 requisições por segundo. 
+
+Ao executar a chamada na api podemos verificar ao atingir o limite recebemos 429 TOO MANY REQUESTS.
+
+![Alt text](https://github.com/marcosouzatech/desafio/img/teste de carga1-postman.png)
+
+![Alt text](https://github.com/marcosouzatech/desafio/img/hey-teste-trafego.png)
+
 
 ## 3 - MONITORAMENTO
 
@@ -61,3 +71,19 @@ Foi implementado o kubecost para auxiliar no controle dos custos do ambiente, el
 Este challenge foi realmente desafiador, trouxe conteúdo denso de vários aspectos envolvendo infraestrutura, desenvolvimento e operações, com certeza temos vários pontos a melhorar principalmente visando IAC. 
 
 
+#### REFERÊNCIAS
+
+Hey- Load to a web application.
+https://github.com/rakyll/hey
+
+Base API - Golang
+https://devbook.com.br/curso-golang/
+
+APM - NEW RELIC
+https://newrelic.com/pt
+
+Kubecost - Monitor and manage Kubernetes spend
+https://github.com/kubecost/cost-analyzer-helm-chart
+
+EVIDÊNCIAS DO PRJETO.
+https://github.dev/marcosouzatech/desafio/img/
